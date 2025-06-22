@@ -284,6 +284,187 @@
             border-radius: 5px;
             transition: width 0.5s ease;
         }
+
+        /* تأثيرات الاحتفال */
+        .celebration-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeInOverlay 0.5s ease;
+        }
+
+        .celebration-content {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.7);
+            animation: celebrationBounce 0.8s ease forwards;
+        }
+
+        .celebration-content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+
+        .celebration-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .close-celebration {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-celebration:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeInOverlay {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes celebrationBounce {
+            0% { transform: scale(0.7) translateY(50px); opacity: 0; }
+            50% { transform: scale(1.1) translateY(-20px); opacity: 1; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        @keyframes textGlow {
+            from { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+            to { text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8); }
+        }
+
+        /* الكونفيتي */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #f1c40f;
+            animation: confettiFall 3s linear infinite;
+            z-index: 999;
+        }
+
+        .confetti:nth-child(odd) {
+            background: #e74c3c;
+            animation-delay: -0.5s;
+        }
+
+        .confetti:nth-child(even) {
+            background: #3498db;
+            animation-delay: -1s;
+        }
+
+        .confetti:nth-child(3n) {
+            background: #27ae60;
+            animation-delay: -1.5s;
+        }
+
+        .confetti:nth-child(4n) {
+            background: #9b59b6;
+            animation-delay: -2s;
+        }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* تأثير النجوم */
+        .star {
+            position: fixed;
+            color: #f1c40f;
+            font-size: 20px;
+            z-index: 998;
+            animation: starTwinkle 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes starTwinkle {
+            0%, 100% { 
+                opacity: 0.3; 
+                transform: scale(0.8); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.2); 
+            }
+        }
+
+        /* تأثير الألعاب النارية */
+        .firework {
+            position: fixed;
+            border-radius: 50%;
+            animation: fireworkExplode 2s ease-out forwards;
+            z-index: 997;
+        }
+
+        @keyframes fireworkExplode {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* تأثير الموجة */
+        .wave-effect {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+            transform: translate(-50%, -50%);
+            animation: waveExpand 1.5s ease-out forwards;
+            z-index: 996;
+        }
+
+        @keyframes waveExpand {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                width: 150vw;
+                height: 150vw;
+                opacity: 0;
+            }
+        }
         
         @media (max-width: 768px) {
             .container {
@@ -943,6 +1124,39 @@
                 بالتوفيق في الامتحان! 🍀✨
             </div>
         </div>
+
+        <!-- كاتب التلخيص -->
+        <div style="background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 25px; border-radius: 15px; margin-top: 20px; text-align: center; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
+            <h3 style="font-size: 1.6rem; margin-bottom: 15px; color: #ecf0f1;">✍️ كاتب التلخيص</h3>
+            <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 10px;">
+                أخوكم محمود عبدالقوي
+            </p>
+            <p style="font-size: 1.1rem; margin-bottom: 15px; color: #bdc3c7;">
+                🤲 أرجو منكم الدعاء
+            </p>
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;">
+                <p style="font-size: 1.2rem; font-weight: bold; color: #f1c40f;">
+                    🌟 بالتوفيق للجميع 🌟
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- شاشة الاحتفال -->
+    <div class="celebration-overlay" id="celebrationOverlay">
+        <div class="celebration-content">
+            <h2>🎉 تهانينا! 🎉</h2>
+            <p>لقد أكملت جميع الأسئلة الـ 25!</p>
+            <p>🏆 أنت جاهز للامتحان! 🏆</p>
+            <p style="font-size: 1.2rem; margin: 20px 0;">
+                إعداد: أخوكم محمود عبدالقوي<br>
+                🤲 لا تنسونا من دعائكم
+            </p>
+            <p>✨ بالتوفيق والنجاح للجميع! ✨</p>
+            <button class="close-celebration" onclick="closeCelebration()">
+                عودة للمراجعة 📚
+            </button>
+        </div>
     </div>
 
     <script>
@@ -968,6 +1182,147 @@
             const progress = (answeredQuestions / totalQuestions) * 100;
             document.getElementById('progressBar').style.width = progress + '%';
             document.getElementById('progressText').textContent = `التقدم: ${answeredQuestions} من ${totalQuestions} سؤال`;
+            
+            // تحقق من إكمال جميع الأسئلة
+            if (answeredQuestions === totalQuestions) {
+                setTimeout(startCelebration, 500);
+            }
+        }
+
+        function startCelebration() {
+            // إظهار شاشة الاحتفال
+            document.getElementById('celebrationOverlay').style.display = 'flex';
+            
+            // إنشاء تأثير الموجة
+            createWaveEffect();
+            
+            // إنشاء الكونفيتي
+            createConfetti();
+            
+            // إنشاء النجوم
+            createStars();
+            
+            // إنشاء الألعاب النارية
+            createFireworks();
+            
+            // تشغيل صوت الاحتفال (اختياري)
+            playSuccessSound();
+        }
+
+        function createWaveEffect() {
+            const wave = document.createElement('div');
+            wave.className = 'wave-effect';
+            document.body.appendChild(wave);
+            
+            setTimeout(() => {
+                wave.remove();
+            }, 1500);
+        }
+
+        function createConfetti() {
+            const colors = ['#f1c40f', '#e74c3c', '#3498db', '#27ae60', '#9b59b6', '#e67e22'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    confetti.style.width = confetti.style.height = (Math.random() * 6 + 8) + 'px';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 4000);
+                }, i * 100);
+            }
+        }
+
+        function createStars() {
+            const starSymbols = ['⭐', '✨', '🌟', '💫', '🎊'];
+            
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const star = document.createElement('div');
+                    star.className = 'star';
+                    star.textContent = starSymbols[Math.floor(Math.random() * starSymbols.length)];
+                    star.style.left = Math.random() * 100 + '%';
+                    star.style.top = Math.random() * 100 + '%';
+                    star.style.fontSize = (Math.random() * 15 + 15) + 'px';
+                    star.style.animationDelay = Math.random() * 2 + 's';
+                    document.body.appendChild(star);
+                    
+                    setTimeout(() => {
+                        star.remove();
+                    }, 4000);
+                }, i * 150);
+            }
+        }
+
+        function createFireworks() {
+            const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeaa7', '#dda0dd'];
+            
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const firework = document.createElement('div');
+                    firework.className = 'firework';
+                    firework.style.left = Math.random() * 80 + 10 + '%';
+                    firework.style.top = Math.random() * 60 + 20 + '%';
+                    firework.style.width = firework.style.height = (Math.random() * 60 + 40) + 'px';
+                    firework.style.background = `radial-gradient(circle, ${colors[Math.floor(Math.random() * colors.length)]}, transparent)`;
+                    document.body.appendChild(firework);
+                    
+                    setTimeout(() => {
+                        firework.remove();
+                    }, 2000);
+                }, i * 300);
+            }
+        }
+
+        function playSuccessSound() {
+            // محاولة تشغيل صوت الاحتفال باستخدام Web Audio API
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                
+                // إنشاء نغمة احتفالية بسيطة
+                function playTone(frequency, duration, delay = 0) {
+                    setTimeout(() => {
+                        const oscillator = audioContext.createOscillator();
+                        const gainNode = audioContext.createGain();
+                        
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioContext.destination);
+                        
+                        oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
+                        oscillator.type = 'sine';
+                        
+                        gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+                        gainNode.gain.linearRampToValueAtTime(0.1, audioContext.currentTime + 0.01);
+                        gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + duration);
+                        
+                        oscillator.start(audioContext.currentTime);
+                        oscillator.stop(audioContext.currentTime + duration);
+                    }, delay);
+                }
+                
+                // تشغيل مقطوعة احتفالية قصيرة
+                playTone(523.25, 0.2, 0);    // C5
+                playTone(659.25, 0.2, 200);  // E5
+                playTone(783.99, 0.2, 400);  // G5
+                playTone(1046.5, 0.4, 600);  // C6
+            } catch (error) {
+                console.log('لا يمكن تشغيل الصوت');
+            }
+        }
+
+        function closeCelebration() {
+            document.getElementById('celebrationOverlay').style.display = 'none';
+            
+            // إزالة أي تأثيرات متبقية
+            document.querySelectorAll('.confetti, .star, .firework, .wave-effect').forEach(el => {
+                el.remove();
+            });
         }
 
         // Tab functionality
