@@ -318,13 +318,15 @@
             <div class="progress-bar">
                 <div class="progress" id="progressBar" style="width: 0%"></div>
             </div>
-            <p id="progressText">التقدم: 0 من 15 سؤال</p>
+            <p id="progressText">التقدم: 0 من 25 سؤال</p>
         </div>
 
         <div class="tabs">
             <button class="tab-btn active" data-tab="shadh">الحديث الشاذ</button>
             <button class="tab-btn" data-tab="muall">الحديث المعل</button>
+            <button class="tab-btn" data-tab="definitions">التعريفات المتقدمة</button>
             <button class="tab-btn" data-tab="scholars">العلماء والكتب</button>
+            <button class="tab-btn" data-tab="examples">أمثلة تطبيقية</button>
             <button class="tab-btn" data-tab="summary">الملخص</button>
         </div>
 
@@ -381,14 +383,23 @@
             <div class="question-card" onclick="toggleAnswer(this)">
                 <div class="question-title">
                     <span class="question-number">3</span>
-                    اذكر مثالًا على حديث شاذ؟
+                    اذكر تعريفات العلماء للحديث الشاذ؟
                 </div>
                 <div class="answer">
-                    <div class="example">
-                        <strong>حديث الفأرة في السمن:</strong><br>
-                        • معمر عن الزهري: "فألقوا ما حولها"<br>
-                        • الثقات عن الزهري: "فألقوه كله"<br>
-                        <span class="highlight">النتيجة: رواية معمر شاذة لأنه خالف من هو أوثق منه</span>
+                    <div class="definition">
+                        <strong>1. تعريف الشافعي:</strong><br>
+                        "أن يروي الثقة شيئًا يخالف فيه غيره من الثقات، لا أن يروي ما لا يروي غيره"
+                    </div>
+                    <div class="definition">
+                        <strong>2. تعريف الخليلي:</strong><br>
+                        "ما ليس له إلا إسناد واحد سواء رواه ثقة أو غيره"
+                    </div>
+                    <div class="definition">
+                        <strong>3. تعريف الحاكم:</strong><br>
+                        "ما انفرد به ثقة وليس له أصل بمتابع، وينقدح في نفس الناقد أنه غلط"
+                    </div>
+                    <div class="highlight">
+                        تعريف الحاكم أخص من تعريف الخليلي
                     </div>
                 </div>
             </div>
@@ -396,14 +407,20 @@
             <div class="question-card" onclick="toggleAnswer(this)">
                 <div class="question-title">
                     <span class="question-number">4</span>
-                    ما حكم الحديث الشاذ؟
+                    ما الانتقادات على تعريف الخليلي والحاكم؟
                 </div>
                 <div class="answer">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="background: #e74c3c; color: white; padding: 10px; margin: 5px 0; border-radius: 5px;">
+                            🔸 إفراد العدل الضابط الحافظ (مثل: حديث "إنما الأعمال بالنيات")
+                        </li>
+                        <li style="background: #f39c12; color: white; padding: 10px; margin: 5px 0; border-radius: 5px;">
+                            📚 وجود أحاديث في الصحيحين لم يرويها إلا راو واحد
+                        </li>
+                    </ul>
                     <div class="highlight">
-                        يُعتبر ضعيفًا ولا يُحتج به
+                        هذه الانتقادات أدت لظهور التعريف المختار
                     </div>
-                    <p><strong>السبب:</strong> لأنه يدل على خلل في الضبط ومخالفة من هو أرجح</p>
-                    <p><strong>التفصيل:</strong> الثقة إذا خالف من هو أرجح منه ضبطًا وعددًا، تُقدَّم رواية الأوثق</p>
                 </div>
             </div>
 
@@ -414,7 +431,10 @@
                 </div>
                 <div class="answer">
                     <div class="definition">
-                        لأن الحديث الشاذ <strong>لا يُمكن إقامة دليل واضح فيه</strong>، بخلاف المعل الذي يمكن معرفة وجه الخطأ فيه بدقة
+                        لأن الحديث المعل يستطيع الناقد أن يقف فيه على وجه الخطأ، بخلاف الحديث الشاذ فلا يستطيع أن يقيم الدليل على الراوي
+                    </div>
+                    <div class="highlight">
+                        قال السيوطي: "الحديث الشاذ أدق من الحديث المعلل، ولم ينفرد به أحد في التصنيف لخطورة الحكم عليه"
                     </div>
                 </div>
             </div>
@@ -479,14 +499,22 @@
             <div class="question-card" onclick="toggleAnswer(this)">
                 <div class="question-title">
                     <span class="question-number">9</span>
-                    اذكر مثالًا لحديث فيه علة؟
+                    أين تقع العلة في الحديث؟
                 </div>
                 <div class="answer">
-                    <div class="example">
-                        <strong>حديث: "البيعان بالخيار ما لم يتفرقا"</strong><br>
-                        • روي مرة عن <strong>عمرو بن دينار</strong><br>
-                        • ومرة عن <strong>عبد الله بن دينار</strong><br>
-                        <span class="highlight">النتيجة: رجح العلماء رواية عبد الله ← فالعلة في رواية عمرو</span>
+                    <div class="summary-grid">
+                        <div class="summary-card">
+                            <h3>في الإسناد</h3>
+                            <p>الأكثر شيوعًا<br>قد تؤثر على المتن أيضًا</p>
+                        </div>
+                        <div class="summary-card">
+                            <h3>في المتن</h3>
+                            <p>أقل شيوعًا<br>خطأ في نص الحديث</p>
+                        </div>
+                        <div class="summary-card">
+                            <h3>في كليهما</h3>
+                            <p>الأصعب في الكشف<br>يحتاج خبرة عالية</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -494,13 +522,97 @@
             <div class="question-card" onclick="toggleAnswer(this)">
                 <div class="question-title">
                     <span class="question-number">10</span>
-                    متى يُطلق العلماء العلة على غير معناها الفني؟
+                    كيف تُدرك العلة؟
                 </div>
                 <div class="answer">
                     <div class="definition">
-                        • إذا كانت <strong>غفلة من الراوي</strong><br>
-                        • أو حديث <strong>منسوخ</strong> (كما عند الترمذي)<br>
-                        • أو إذا كانت علة <strong>لا تقدح في الصحة</strong> (مثل المعضل وله سند آخر متصل)
+                        <strong>الشرط الأساسي:</strong> أن يكون الإسناد ظاهره الصحة وتوفرت فيه شروطها
+                    </div>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="background: #3498db; color: white; padding: 10px; margin: 5px 0; border-radius: 5px;">
+                            📋 تفرد الراوي بمخالفة غيره
+                        </li>
+                        <li style="background: #27ae60; color: white; padding: 10px; margin: 5px 0; border-radius: 5px;">
+                            🔗 إرسال في الموصول (إسقاط راو)
+                        </li>
+                        <li style="background: #e74c3c; color: white; padding: 10px; margin: 5px 0; border-radius: 5px;">
+                            ⬇️ وقف في المرفوع (نسبة للتابعي بدل النبي)
+                        </li>
+                        <li style="background: #f39c12; color: white; padding: 10px; margin: 5px 0; border-radius: 5px;">
+                            🔀 دخول حديث في حديث آخر
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- التعريفات المتقدمة -->
+        <div class="content-section" id="definitions">
+            <div class="question-card" onclick="toggleAnswer(this)">
+                <div class="question-title">
+                    <span class="question-number">11</span>
+                    عرّف الحديث المعلل لغة؟
+                </div>
+                <div class="answer">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>الصيغة</th>
+                                <th>الحكم اللغوي</th>
+                                <th>من استعملها</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>المعلول</strong></td>
+                                <td>لحن (خطأ)</td>
+                                <td>البخاري والترمذي</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المعلل</strong></td>
+                                <td>مستقيم لغويًا</td>
+                                <td>بعض العلماء</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المعل</strong></td>
+                                <td>الأفصح</td>
+                                <td>علماء اللغة</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question-card" onclick="toggleAnswer(this)">
+                <div class="question-title">
+                    <span class="question-number">12</span>
+                    متى يتوسع العلماء في إطلاق العلة؟
+                </div>
+                <div class="answer">
+                    <div class="definition">
+                        <strong>1. الغفلة من الراوي:</strong> كسبب ظاهر يقدح في الصحة
+                    </div>
+                    <div class="definition">
+                        <strong>2. الأحاديث المنسوخة:</strong> توسع الترمذي في إطلاق العلة عليها
+                    </div>
+                    <div class="definition">
+                        <strong>3. ما لا يقدح في الصحة:</strong> كالحديث المعضل في طريق مسند من طريق آخر
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" onclick="toggleAnswer(this)">
+                <div class="question-title">
+                    <span class="question-number">13</span>
+                    ما الطريق إلى معرفة العلة؟
+                </div>
+                <div class="answer">
+                    <div class="highlight">
+                        جمع طرق الحديث والنظر في اختلاف الرواة ومدى ضبطهم وإتقانهم
+                    </div>
+                    <div class="definition">
+                        <strong>قال ابن المديني:</strong><br>
+                        "الباب إذا لم تُجمع طرقه لم يتبين خطؤه"
                     </div>
                 </div>
             </div>
@@ -510,7 +622,7 @@
         <div class="content-section" id="scholars">
             <div class="question-card" onclick="toggleAnswer(this)">
                 <div class="question-title">
-                    <span class="question-number">11</span>
+                    <span class="question-number">14</span>
                     من أبرز علماء علل الحديث؟
                 </div>
                 <div class="answer">
@@ -534,12 +646,15 @@
                             <h3>يعقوب بن شيبة</h3>
                         </div>
                     </div>
+                    <div class="highlight">
+                        الحجة عندهم في التعليل: أن يكون الراوي حافظ فاهم عارف لا غير
+                    </div>
                 </div>
             </div>
 
             <div class="question-card" onclick="toggleAnswer(this)">
                 <div class="question-title">
-                    <span class="question-number">12</span>
+                    <span class="question-number">15</span>
                     ما الكتب المشهورة في العلل؟
                 </div>
                 <div class="answer">
@@ -578,11 +693,130 @@
             </div>
         </div>
 
+        <!-- أمثلة تطبيقية -->
+        <div class="content-section" id="examples">
+            <div class="question-card" onclick="toggleAnswer(this)">
+                <div class="question-title">
+                    <span class="question-number">16</span>
+                    مثال مفصل على الحديث الشاذ (حديث الفأرة في السمن)
+                </div>
+                <div class="answer">
+                    <div class="example">
+                        <strong>رواية معمر (الشاذة):</strong><br>
+                        عن الزهري عن سعيد بن المسيب عن أبي هريرة:<br>
+                        "إذا وقعت فأرة في السمن وكان جامدًا فألقوه وما حوله، وإن كان مائعًا فألقوه كله"
+                    </div>
+                    <div class="example">
+                        <strong>رواية الثقات (المحفوظة):</strong><br>
+                        عن الزهري عن عبيد الله عن ابن عباس عن ميمونة:<br>
+                        "إذا وقعت الفأرة في سمن أحدكم فألقوه كله"
+                    </div>
+                    <div class="highlight">
+                        رواية معمر شاذة مع أن معمر ثقة، لكنه خالف الثقات
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" onclick="toggleAnswer(this)">
+                <div class="question-title">
+                    <span class="question-number">17</span>
+                    مثال مفصل على الحديث المعل (حديث البيعان بالخيار)
+                </div>
+                <div class="answer">
+                    <div class="example">
+                        <strong>الطريق الأول:</strong><br>
+                        يعلى بن عبيد عن الثوري عن <span class="highlight">عمرو بن دينار</span> عن ابن عمر مرفوعًا
+                    </div>
+                    <div class="example">
+                        <strong>الطريق الثاني:</strong><br>
+                        يعلى بن عبيد عن الثوري عن <span class="highlight">عبد الله بن دينار</span> عن ابن عمر مرفوعًا
+                    </div>
+                    <div class="definition">
+                        <strong>العلة:</strong> كلا الراويين ثقة، لكن كل الثقات يروونه عن عبد الله بن دينار<br>
+                        <strong>النتيجة:</strong> العلة في رواية عمرو بن دينار
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" onclick="toggleAnswer(this)">
+                <div class="question-title">
+                    <span class="question-number">18</span>
+                    مثال على حديث منفرد صحيح (حديث الأعمال بالنيات)
+                </div>
+                <div class="answer">
+                    <div class="definition">
+                        <strong>الحديث:</strong> "إنما الأعمال بالنيات"<br>
+                        <strong>الراوي:</strong> لم يروه إلا عمر بن الخطاب عن الرسول ﷺ
+                    </div>
+                    <div class="highlight">
+                        هذا رد على من يقول أن كل حديث منفرد شاذ<br>
+                        فهذا الحديث في صحيح البخاري ومسلم رغم تفرده
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" onclick="toggleAnswer(this)">
+                <div class="question-title">
+                    <span class="question-number">19</span>
+                    الفرق بين الشاذ والمنكر عند ابن حجر
+                </div>
+                <div class="answer">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>الوجه</th>
+                                <th>الحديث الشاذ</th>
+                                <th>الحديث المنكر</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>الراوي</strong></td>
+                                <td>ثقة أو صدوق</td>
+                                <td>ضعيف</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المخالفة</strong></td>
+                                <td>يخالف من هو أولى منه</td>
+                                <td>يخالف من هو أولى منه</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المقابل</strong></td>
+                                <td>المحفوظ</td>
+                                <td>المعروف</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="highlight">
+                        قال ابن حجر: "قد غفل من سوّى بين المنكر والشاذ"
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" onclick="toggleAnswer(this)">
+                <div class="question-title">
+                    <span class="question-number">20</span>
+                    أقوال العلماء في أهمية علل الحديث
+                </div>
+                <div class="answer">
+                    <div class="definition">
+                        <strong>الحاكم:</strong> "يُعل الحديث من أوجه ليس للجرح فيها مُدخل"
+                    </div>
+                    <div class="definition">
+                        <strong>المهدي:</strong> "لأن أعرف علة حديث أحب إلي من أن أحفظ عشرين حديثًا"
+                    </div>
+                    <div class="highlight">
+                        هو من أجل العلوم في علم الحديث، ولا يتمكن منه إلا أهل الحفظ والخبرة والفهم الثاقب
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- الملخص -->
         <div class="content-section" id="summary">
             <div class="question-card" onclick="toggleAnswer(this)">
                 <div class="question-title">
-                    <span class="question-number">13</span>
+                    <span class="question-number">21</span>
                     المصطلحات الأساسية
                 </div>
                 <div class="answer">
@@ -605,7 +839,7 @@
 
             <div class="question-card" onclick="toggleAnswer(this)">
                 <div class="question-title">
-                    <span class="question-number">14</span>
+                    <span class="question-number">22</span>
                     المقابلات المهمة
                 </div>
                 <div class="answer">
@@ -628,7 +862,7 @@
 
             <div class="question-card" onclick="toggleAnswer(this)">
                 <div class="question-title">
-                    <span class="question-number">15</span>
+                    <span class="question-number">23</span>
                     الأمثلة المهمة
                 </div>
                 <div class="answer">
@@ -642,6 +876,56 @@
                     </div>
                 </div>
             </div>
+
+            <div class="question-card" onclick="toggleAnswer(this)">
+                <div class="question-title">
+                    <span class="question-number">24</span>
+                    أشهر الكتب والعلماء
+                </div>
+                <div class="answer">
+                    <div class="summary-grid">
+                        <div class="summary-card">
+                            <h3>أشهر العلماء</h3>
+                            <p>البخاري - ابن المديني<br>أحمد - أبو حاتم<br>الدارقطني</p>
+                        </div>
+                        <div class="summary-card">
+                            <h3>أشهر الكتب</h3>
+                            <p>علل ابن المديني<br>علل الدارقطني (أجمعها)<br>الزهر المثلول</p>
+                        </div>
+                        <div class="summary-card">
+                            <h3>أقوال مأثورة</h3>
+                            <p>"الباب إذا لم تجمع طرقه لم يتبين خطؤه"<br>- ابن المديني</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" onclick="toggleAnswer(this)">
+                <div class="question-title">
+                    <span class="question-number">25</span>
+                    ملخص شامل للمراجعة
+                </div>
+                <div class="answer">
+                    <div class="definition">
+                        <strong>تعريفات أساسية:</strong><br>
+                        • الشاذ: ثقة خالف الأوثق<br>
+                        • المنكر: ضعيف خالف الثقات<br>
+                        • المعل: فيه علة خفية تقدح في صحته
+                    </div>
+                    <div class="example">
+                        <strong>أمثلة للحفظ:</strong><br>
+                        • الفأرة في السمن (شاذ)<br>
+                        • البيعان بالخيار (معل)<br>
+                        • الأعمال بالنيات (منفرد صحيح)
+                    </div>
+                    <div class="highlight">
+                        <strong>نقاط مهمة:</strong><br>
+                        - العلة أخفى من الشذوذ<br>
+                        - جمع الطرق أساس معرفة العلة<br>
+                        - الحاكم أخص من الخليلي في التعريف
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="tips">
@@ -652,6 +936,8 @@
                 <li>أتقن الفروق بين المصطلحات المتشابهة</li>
                 <li>اذكر أسماء العلماء والكتب المشهورة</li>
                 <li>اهتم بالتعليل وأسباب الأحكام</li>
+                <li>راجع أقوال العلماء المأثورة</li>
+                <li>اهتم بالأمثلة التطبيقية</li>
             </ul>
             <div style="margin-top: 20px; font-size: 1.5rem; font-weight: bold;">
                 بالتوفيق في الامتحان! 🍀✨
@@ -661,7 +947,7 @@
 
     <script>
         let answeredQuestions = 0;
-        const totalQuestions = 15;
+        const totalQuestions = 25;
 
         function toggleAnswer(card) {
             const answer = card.querySelector('.answer');
